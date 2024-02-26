@@ -56,6 +56,7 @@ driver.quit()
 # Pandas DataFrame oluşturma
 
 df_players = pd.DataFrame(players_data)
+df_players.insert(0, 'ID', range(1, len(df_players) + 1))
 # DataFrame'i CSV dosyasına kaydetme
 csv_file_path = '/Hedeflenen Dizin/dosya_adi.csv' #Kaydetmek istenilen dizin, dosya adı ve uzantısı
 df_players.to_csv(csv_file_path, index=False, encoding='utf-8')
